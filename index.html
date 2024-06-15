@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Leasing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Car Leasing Calculator</h1>
+    <div class="main-container">
+        <div class="block">
+            <div class="input-group">
+                <label>Car Type:</label>
+                <select id="carType">
+                    <option value="new">Brand New</option>
+                    <option value="used">Used</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Car Value:</label>
+                <input type="number" id="carValue" min="10000" max="200000" step="1000" value="10000">
+                <input type="range" id="carValueRange" min="10000" max="200000" step="1000" value="10000">
+            </div>
+        </div>
+        <div class="block">
+            <div class="input-group">
+                <label>Lease Period (months):</label>
+                <input type="number" id="leasePeriod" min="12" max="60" step="12" value="12">
+                <input type="range" id="leasePeriodRange" min="12" max="60" step="12" value="12">
+            </div>
+            <div class="input-group">
+                <label>Down Payment (10% - 50%):</label>
+                <input type="number" id="downPayment" min="10" max="50" step="5" value="10">
+                <input type="range" id="downPaymentRange" min="10" max="50" step="5" value="10">
+            </div>
+        </div>
+    </div>
+    <div class="horizontal-line-container">
+        <hr class="content-hr">
+    </div>
+    <div class="leasing-details">
+        <h2>Leasing Details</h2>
+        <div class="detail-block">
+            <div class="detail-left">
+                <p>Total Leasing Cost: <span id="totalCost"></span></p>
+                <p>Down Payment: <span id="downPaymentDisplay"></span></p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="detail-right">
+                <p>Monthly Installment: <span id="monthlyInstallment"></span></p>
+                <p>Interest Rate: <span id="interestRate"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
